@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Nunito as FontSans } from 'next/font/google'
+import { ThemeProvider } from '~/components/providers'
 import { cn } from '~/lib/utils'
 import '~/styles/globals.css'
 
@@ -27,7 +28,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSans.variable,
         )}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
