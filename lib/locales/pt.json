@@ -1,0 +1,16 @@
+{
+  "translation": {
+    "site.title": "PedeAí",
+    "site.description": "O melhor aplicativo para gerir as vendas do seu negócio.",
+
+    "sidebar.description": "Seu pedido na palma da sua mão.",
+
+    "sidebar.settings": "Configurações",
+    "sidebar.personalize": "Personalizar",
+    "sidebar.permissions": "Permissões",
+
+    "sidebar.users": "Usuários",
+    "sidebar.profile": "Perfil",
+    "sidebar.change_password": "Alterar senha"
+  }
+}

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Nunito as FontSans } from 'next/font/google'
-import { ThemeProvider } from '~/components/providers'
+import { Providers } from '~/components/providers'
 import { Toaster } from '~/components/ui/toaster'
 import { cn } from '~/lib/utils'
 import '~/styles/globals.css'
@@ -21,7 +21,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <head />
       <body
         className={cn(
@@ -29,15 +29,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSans.variable,
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <Providers>
           {children}
           <Toaster />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   )

@@ -1,8 +1,17 @@
 'use client'
 
-import { ThemeProvider as NextThemesProvider } from 'next-themes'
-import { type ThemeProviderProps } from 'next-themes/dist/types'
+import { i18n } from '~/lib/i18n'
+import { ThemeProvider } from './theme-provider'
+import { TranslationProvider } from './translation-provider'
 
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+interface ProvidersProps {
+  children: React.ReactNode
+}
+
+export function Providers({ children }: ProvidersProps) {
+  return (
+    <ThemeProvider>
+      <TranslationProvider i18n={i18n}>{children}</TranslationProvider>
+    </ThemeProvider>
+  )
 }

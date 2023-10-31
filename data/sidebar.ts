@@ -3,15 +3,14 @@ import { IconBaseProps } from 'react-icons'
 import { LuCog, LuLock, LuPencil, LuUser } from 'react-icons/lu'
 
 export interface SidebarLink {
-  label: string
+  key: string
   route: string
   icon?: ComponentType<IconBaseProps>
 }
 
 export interface SidebarMenu {
-  title: string
+  key: string
   menu: SidebarLink[]
-  icon?: ComponentType<IconBaseProps>
 }
 
 export interface SidebarProps {
@@ -20,17 +19,17 @@ export interface SidebarProps {
 
 export const sidebarData: SidebarMenu[] = [
   {
-    title: 'Configurações',
+    key: 'sidebar.settings',
     menu: [
-      { label: 'Personalizar', route: '.', icon: LuPencil },
-      { label: 'Permições', route: '.', icon: LuCog },
+      { key: 'sidebar.personalize', route: '/', icon: LuPencil },
+      { key: 'sidebar.permissions', route: '/', icon: LuCog },
     ],
   },
   {
-    title: 'Usuários',
+    key: 'sidebar.users',
     menu: [
-      { label: 'Perfil', route: '.', icon: LuUser },
-      { label: 'Alterar senha', route: '.', icon: LuLock },
+      { key: 'sidebar.profile', route: '/', icon: LuUser },
+      { key: 'sidebar.change_password', route: '/', icon: LuLock },
     ],
   },
 ]
