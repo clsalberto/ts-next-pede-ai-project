@@ -1,16 +1,22 @@
 {
   "translation": {
-    "site.title": "OrderHere",
-    "site.description": "The best application to manage your business sales.",
-
-    "sidebar.description": "Your order in the palm of your hand.",
-
-    "sidebar.settings": "Settings",
-    "sidebar.personalize": "Personalize",
-    "sidebar.permissions": "Permissions",
-
-    "sidebar.users": "Users",
-    "sidebar.profile": "Profile",
-    "sidebar.change_password": "Change password"
+    "app": {
+      "title": "OrderHere",
+      "description": "The best application to manage your business sales."
+    },
+    "sidebar": {
+      "description": "Your order in the palm of your hand.",
+      "settings": "Settings",
+      "personalize": "Personalize",
+      "permissions": "Permissions",
+      "users": "Users",
+      "profile": "Profile",
+      "change_password": "Change password"
+    },
+    "mode": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    }
   }
 }

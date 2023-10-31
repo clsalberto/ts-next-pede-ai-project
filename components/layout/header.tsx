@@ -22,7 +22,7 @@ export function Header({ className, ...props }: HeaderProps) {
             <div className="flex items-center space-x-2">
               <Sidebar data={sidebarData} />
               <h2 className="text-xl font-extrabold text-primary">
-                {t('site.title')}
+                {t('app.title')}
               </h2>
             </div>
             <div className="flex items-center space-x-4">

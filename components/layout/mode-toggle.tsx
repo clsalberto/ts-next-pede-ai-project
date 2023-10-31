@@ -1,6 +1,7 @@
 'use client'
 
 import { useTheme } from 'next-themes'
+import { useTranslation } from 'react-i18next'
 
 import { Button } from '~/components/ui/button'
 import {
@@ -13,6 +14,7 @@ import { Icons } from '../icons'
 
 export function ModeToggle() {
   const { setTheme } = useTheme()
+  const { t } = useTranslation()
 
   return (
     <DropdownMenu>
@@ -25,13 +27,13 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme('light')}>
-          Light
+          {t('mode.light')}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme('dark')}>
-          Dark
+          {t('mode.dark')}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme('system')}>
-          System
+          {t('mode.system')}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

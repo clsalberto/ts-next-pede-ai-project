@@ -1,16 +1,22 @@
 {
   "translation": {
-    "site.title": "PedeAí",
-    "site.description": "O melhor aplicativo para gerir as vendas do seu negócio.",
-
-    "sidebar.description": "Seu pedido na palma da sua mão.",
-
-    "sidebar.settings": "Configurações",
-    "sidebar.personalize": "Personalizar",
-    "sidebar.permissions": "Permissões",
-
-    "sidebar.users": "Usuários",
-    "sidebar.profile": "Perfil",
-    "sidebar.change_password": "Alterar senha"
+    "app": {
+      "title": "PedeAí",
+      "description": "O melhor aplicativo para gerir as vendas do seu negócio."
+    },
+    "sidebar": {
+      "description": "Seu pedido na palma da sua mão.",
+      "settings": "Configurações",
+      "personalize": "Personalizar",
+      "permissions": "Permissões",
+      "users": "Usuários",
+      "profile": "Perfil",
+      "change_password": "Alterar senha"
+    },
+    "mode": {
+      "light": "Modo claro",
+      "dark": "Modo escuro",
+      "system": "Padrão do sistema"
+    }
   }
 }

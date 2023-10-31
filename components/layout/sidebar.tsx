@@ -30,7 +30,7 @@ export function Sidebar({ data }: SidebarProps) {
         <SheetHeader className="mb-2 text-left">
           <SheetTitle className="flex items-center space-x-2">
             <h2 className="text-xl font-extrabold text-primary">
-              {t('site.title')}
+              {t('app.title')}
             </h2>
           </SheetTitle>
           <SheetDescription>{t('sidebar.description')}</SheetDescription>
