@@ -44,7 +44,7 @@ export function Sidebar({ data }: SidebarProps) {
                 </h2>
                 <div className="space-y-1">
                   {menu.map(({ key, route, icon: Icon }, j) => (
-                    <SheetClose key={j}>
+                    <SheetClose key={j} asChild>
                       <Link
                         href={route}
                         className={cn(
