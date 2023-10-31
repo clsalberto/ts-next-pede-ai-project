@@ -36,18 +36,17 @@ export function Sidebar({ data }: SidebarProps) {
           <SheetDescription>{t('sidebar.description')}</SheetDescription>
         </SheetHeader>
         {data && (
-          <SheetClose>
-            <div className="space-y-4 py-4">
-              {data.map(({ key, menu }, i) => (
-                <div key={i} className="px-3 py-2">
-                  <h2 className="mb-2 flex items-center gap-2 px-4 text-lg font-semibold tracking-tight">
-                    {t(key)}
-                  </h2>
-                  <div className="space-y-1">
-                    {menu.map(({ key, route, icon: Icon }, j) => (
+          <div className="space-y-4 py-4">
+            {data.map(({ key, menu }, i) => (
+              <div key={i} className="px-3 py-2">
+                <h2 className="mb-2 flex items-center gap-2 px-4 text-lg font-semibold tracking-tight">
+                  {t(key)}
+                </h2>
+                <div className="space-y-1">
+                  {menu.map(({ key, route, icon: Icon }, j) => (
+                    <SheetClose key={j}>
                       <Link
                         href={route}
-                        key={j}
                         className={cn(
                           buttonVariants({ variant: 'ghost' }),
                           'flex w-full items-center justify-start gap-2',
@@ -58,12 +57,12 @@ export function Sidebar({ data }: SidebarProps) {
                         )}
                         {t(key)}
                       </Link>
-                    ))}
-                  </div>
+                    </SheetClose>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </SheetClose>
+              </div>
+            ))}
+          </div>
         )}
       </SheetContent>
     </Sheet>
